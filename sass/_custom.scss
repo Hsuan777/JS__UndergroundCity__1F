@@ -1,0 +1,22 @@
+// 通用類
+.container{
+  width: 1280px;
+  margin: 0 auto;
+}
+@each $color, $value in ($color){
+  .bg-#{$color}{
+    background-color: $value;
+  }
+  .text-#{$color}{
+    color: $value;
+  }
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: wrap;
+  &__item{
+    width: 350px;
+  }
+}
