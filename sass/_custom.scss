@@ -11,15 +11,10 @@
     color: $value;
   }
 }
-.d-flex {
-  display: flex;
-}
-.text-center {
+.text-center{
   text-align: center;
 }
-.text-left {
-  text-align: left;
-}
+
 .content {
   display: flex;
   justify-content: center;
@@ -76,6 +71,7 @@
     }
   }
   &__item {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
