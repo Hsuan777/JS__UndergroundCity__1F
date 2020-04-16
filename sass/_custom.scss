@@ -1,22 +1,71 @@
 // 通用類
-.container{
+.container {
   width: 1280px;
   margin: 0 auto;
 }
-@each $color, $value in ($color){
-  .bg-#{$color}{
+@each $color, $value in ($color) {
+  .bg-#{$color} {
     background-color: $value;
   }
-  .text-#{$color}{
+  .text-#{$color} {
     color: $value;
   }
 }
-.content{
+.d-flex{
+  display: flex;
+}
+.text-center{
+  text-align: center;;
+}
+.text-left{
+  text-align: left;;
+}
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: wrap;
-  &__item{
+  flex-wrap: wrap;
+  padding: 80px 0px;
+  &__title {
     width: 350px;
+    padding: 113.5px 0   118.5px 0;
+    border-top: 1px solid map-get($color, primary);
+    border-bottom: 1px solid map-get($color, primary);
+    position: relative;
+    margin-bottom: 40px;
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    // }
+  }
+  &__item {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: map-get($color, primary);
+    width: 350px;
+    height: 366px;
+    padding: 64px 40px;
+    background: white;
+    box-shadow: 0px 3px 10px #d8d8d8;
+    border-radius: 100px 0px 30px 0px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    &__title{
+      text-shadow: 4px 3px 0px #F0F0F0;
+      font-weight: bold;
+      margin-right: 60px;
+      
+    }
+    &__text{
+      width: 118px;
+      text-align: left;
+      margin-right: 34px;
+      + .content__item__text{
+        margin-top: 8px;
+      }
+    }
+    
   }
 }
