@@ -11,14 +11,14 @@
     color: $value;
   }
 }
-.d-flex{
+.d-flex {
   display: flex;
 }
-.text-center{
-  text-align: center;;
+.text-center {
+  text-align: center;
 }
-.text-left{
-  text-align: left;;
+.text-left {
+  text-align: left;
 }
 .content {
   display: flex;
@@ -28,15 +28,52 @@
   padding: 80px 0px;
   &__title {
     width: 350px;
-    padding: 113.5px 0   118.5px 0;
+    padding: 113.5px 0 118.5px 0;
     border-top: 1px solid map-get($color, primary);
     border-bottom: 1px solid map-get($color, primary);
     position: relative;
     margin-bottom: 40px;
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    // }
+    &__decoration--top {
+      &::before {
+        position: absolute;
+        content: "x";
+        top: -16px;
+        left: 0;
+        padding-right: 21px;
+        font-size: 24px;
+        background: $body__background-color;
+      }
+      &::after {
+        position: absolute;
+        content: "x";
+        top: -16px;
+        right: 0;
+        padding-left: 21px;
+        font-size: 24px;
+        background: $body__background-color;
+      }
+    }
+    &__decoration--bottom{
+      &::before {
+        position: absolute;
+        content: "x";
+        bottom: -9px;
+        left: 0;
+        padding-right: 21px;
+        font-size: 24px;
+        background: $body__background-color;
+      }
+      &::after {
+        position: absolute;
+        content: "x";
+        bottom: -9px;
+        right: 0;
+        padding-left: 21px;
+        font-size: 24px;
+        background: $body__background-color;
+      }
+
+    }
   }
   &__item {
     flex-direction: column;
@@ -52,20 +89,18 @@
     border-radius: 100px 0px 30px 0px;
     margin-left: 30px;
     margin-bottom: 40px;
-    &__title{
-      text-shadow: 4px 3px 0px #F0F0F0;
+    &__title {
+      text-shadow: 4px 3px 0px #f0f0f0;
       font-weight: bold;
       margin-right: 60px;
-      
     }
-    &__text{
+    &__text {
       width: 118px;
       text-align: left;
       margin-right: 34px;
-      + .content__item__text{
+      + .content__item__text {
         margin-top: 8px;
       }
     }
-    
   }
 }
