@@ -5,7 +5,7 @@
 }
 
 body{
-  width: $body__width;
+  max-width: $body__width;
   margin: 0 auto;
   font-size: $body__font-size;
   background-color: $body__background-color;
